@@ -1,179 +1,93 @@
-GITHUB IS WORKING<!DOCTYPE html>
-<html lang="zh">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Freda Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Freda Portfolio</title>
 
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#f6f1e8;
-  color:#2f2a25;
-  scroll-behavior:smooth;
-}
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#f6f1e8;
+      color:#2f2a25;
+    }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  flex-direction:column;
-  background:linear-gradient(180deg,#f6f1e8, #efe6d8);
-  animation:fadeIn 1.5s ease;
-}
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+    }
 
-.hero h1{
-  font-size:26px;
-  letter-spacing:1px;
-}
+    section{
+      padding:80px 20px;
+      max-width:800px;
+      margin:auto;
+    }
 
-.hero p{
-  opacity:0.7;
-  margin-top:10px;
-}
+    .case{
+      margin-bottom:80px;
+    }
 
-/* SECTION */
-section{
-  padding:100px 20px;
-  max-width:900px;
-  margin:auto;
-}
+    h2{
+      margin-bottom:10px;
+    }
 
-.case{
-  margin-bottom:90px;
-  opacity:0;
-  transform:translateY(30px);
-  animation:up 1s forwards;
-}
+    .sub{
+      color:#6b5e52;
+      margin-bottom:20px;
+    }
 
-.case:nth-child(2){animation-delay:0.2s;}
-.case:nth-child(3){animation-delay:0.4s;}
-.case:nth-child(4){animation-delay:0.6s;}
+    .block{
+      margin:15px 0;
+      line-height:1.6;
+    }
 
-h2{
-  font-size:22px;
-  margin-bottom:5px;
-}
-
-.sub{
-  color:#6b5e52;
-  margin-bottom:20px;
-}
-
-.block{
-  margin:18px 0;
-  line-height:1.8;
-}
-
-.highlight{
-  border-left:3px solid #c49a6c;
-  padding-left:12px;
-}
-
-b{
-  font-size:15px;
-}
-
-@keyframes up{
-  to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes fadeIn{
-  from{opacity:0;}
-  to{opacity:1;}
-}
-</style>
+    .highlight{
+      border-left:3px solid #c49a6c;
+      padding-left:10px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Strategy is lived, not written.</h1>
-  <p>scroll to explore</p>
 </div>
 
-<!-- CASE 1 -->
 <section>
+
   <div class="case">
     <h2>情人衛生紙</h2>
     <p class="sub">看見女生的勇敢力量</p>
 
-    <div class="block">
-      <b>Challenge</b><br>
-      突破衛生紙功能性框架，建立情感品牌。
-    </div>
-
-    <div class="block">
-      <b>Strategy</b><br>
-      轉譯為「女生勇敢時刻的陪伴品牌」。
-    </div>
-
-    <div class="block">
-      <b>Execution</b><br>
-      網站互動 × 社群一致敘事。
-    </div>
-
-    <div class="block highlight">
-      <b>Result</b><br>
-      搜尋排名 #1｜品牌＋公益＋故事整合曝光
-    </div>
+    <div class="block">Challenge：突破品類功能性框架</div>
+    <div class="block">Strategy：建立情感品牌語言</div>
+    <div class="block">Execution：網站＋社群整合</div>
+    <div class="block highlight">Result：搜尋 #1｜品牌曝光整合成功</div>
   </div>
 
-  <!-- CASE 2 -->
   <div class="case">
     <h2>陳金鋒｜偏鄉數位平權</h2>
     <p class="sub">數位學習不能等</p>
 
-    <div class="block">
-      <b>Challenge</b><br>
-      偏鄉教育資源落差大，需建立可理解公益敘事。
-    </div>
-
-    <div class="block">
-      <b>Strategy</b><br>
-      結合人物影響力與教育議題建立共感。
-    </div>
-
-    <div class="block">
-      <b>Execution</b><br>
-      整合品牌 × 公益 × 社群內容節奏。
-    </div>
-
-    <div class="block highlight">
-      <b>Result</b><br>
-      搜尋第1｜銷售成長 +55%｜互動成長 +180%
-    </div>
+    <div class="block">Challenge：教育資源落差</div>
+    <div class="block">Strategy：人物 × 公益敘事</div>
+    <div class="block">Execution：整合行銷操作</div>
+    <div class="block highlight">Result：銷售 +55%｜互動 +180%</div>
   </div>
 
-  <!-- CASE 3 -->
   <div class="case">
-    <h2>天使之橋｜醫療產品整合行銷</h2>
-    <p class="sub">醫療溝通策略轉譯</p>
+    <h2>天使之橋｜醫療提案</h2>
+    <p class="sub">醫療產品整合行銷</p>
 
-    <div class="block">
-      <b>Challenge</b><br>
-      醫療資訊專業且難以被理解。
-    </div>
-
-    <div class="block">
-      <b>Strategy</b><br>
-      建立「專業語 → 市場語」雙層轉譯系統。
-    </div>
-
-    <div class="block">
-      <b>Execution</b><br>
-      模組化資訊 × 提案系統化設計。
-    </div>
-
-    <div class="block highlight">
-      <b>Result</b><br>
-      決策時間 ↓35%｜理解效率 ↑2x
-    </div>
+    <div class="block">Challenge：專業資訊難理解</div>
+    <div class="block">Strategy：雙層語言轉譯</div>
+    <div class="block">Execution：模組化提案系統</div>
+    <div class="block highlight">Result：決策時間 ↓35%｜效率 ↑2x</div>
   </div>
 
 </section>
