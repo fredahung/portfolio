@@ -1,96 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>Freda Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freda Portfolio</title>
+    <style>
+        /* 基礎電影感色調 */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f6f1e8; /* 溫暖米白色 */
+            color: #2f2a25; /* 深炭棕色，比純黑更有質感 */
+            overflow-x: hidden;
+        }
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#f6f1e8;
-      color:#2f2a25;
-    }
+        /* Hero 區塊：滿版、一進來的視覺焦點 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 20px;
+        }
 
-    .hero{
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      text-align:center;
-    }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.02em;
+            /* 進場動畫 */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInBlur 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
 
-    section{
-      padding:80px 20px;
-      max-width:800px;
-      margin:auto;
-    }
+        /* 作品集區塊 */
+        .portfolio-section {
+            padding: 120px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
 
-    .case{
-      margin-bottom:80px;
-    }
+        /* 單個 Case 架構 */
+        .case {
+            margin-bottom: 140px;
+            /* 預設為透明與位移，等待動態觸發 */
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-    h2{
-      margin-bottom:10px;
-    }
+        /* 當滾動到畫面上時，觸發這個 Class */
+        .case.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .sub{
-      color:#6b5e52;
-      margin-bottom:20px;
-    }
+        .case h2 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
 
-    .block{
-      margin:15px 0;
-      line-height:1.6;
-    }
+        .case .sub {
+            color: #6b5e52;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
 
-    .highlight{
-      border-left:3px solid #c49a6c;
-      padding-left:10px;
-    }
-  </style>
+        .case .block {
+            margin: 20px 0;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* 強調 Result 的策略證據框 */
+        .case .highlight {
+            border-left: 3px solid #c49a6c;
+            padding-left: 15px;
+            margin-top: 25px;
+            font-weight: 500;
+        }
+
+        /* 純 CSS 的 Hero 進場動畫 */
+        @keyframes fadeInBlur {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="hero">
-  <h1>Strategy is lived, not written.</h1>
-</div>
+    <!-- Hero 區塊（首頁主視覺） -->
+    <div class="hero">
+        <h1>Strategy is lived, not written.</h1>
+    </div>
 
-<section>
+    <!-- 作品策略敘事區塊 -->
+    <section class="portfolio-section">
+        
+        <!-- Case 1 -->
+        <div class="case">
+            <h2>情人衛生紙</h2>
+            <p class="sub">看見女生的勇敢力量</p>
+            <div class="block"><strong>Challenge：</strong>突破品類功能性框架</div>
+            <div class="block"><strong>Strategy：</strong>建立情感品牌語言</div>
+            <div class="block"><strong>Execution：</strong>網站＋社群整合</div>
+            <div class="block highlight">Result：搜尋 #1｜品牌曝光整合成功</div>
+        </div>
 
-  <div class="case">
-    <h2>情人衛生紙</h2>
-    <p class="sub">看見女生的勇敢力量</p>
+        <!-- Case 2 -->
+        <div class="case">
+            <h2>陳金鋒｜偏鄉數位平權</h2>
+            <p class="sub">數位學習不能等</p>
+            <div class="block"><strong>Challenge：</strong>教育資源落差</div>
+            <div class="block"><strong>Strategy：</strong>人物 × 公益敘事</div>
+            <div class="block"><strong>Execution：</strong>整合行銷操作</div>
+            <div class="block highlight">Result：銷售 +55%｜互動 +180%</div>
+        </div>
 
-    <div class="block">Challenge：突破品類功能性框架</div>
-    <div class="block">Strategy：建立情感品牌語言</div>
-    <div class="block">Execution：網站＋社群整合</div>
-    <div class="block highlight">Result：搜尋 #1｜品牌曝光整合成功</div>
-  </div>
+        <!-- Case 3 -->
+        <div class="case">
+            <h2>天使之橋｜醫療提案</h2>
+            <p class="sub">醫療產品整合行銷</p>
+            <div class="block"><strong>Challenge：</strong>專業資訊難理解</div>
+            <div class="block"><strong>Strategy：</strong>雙層語言轉譯</div>
+            <div class="block"><strong>Execution：</strong>模組化提案系統</div>
+            <div class="block highlight">Result：決策時間 ↓35%｜效率 ↑2x</div>
+        </div>
 
-  <div class="case">
-    <h2>陳金鋒｜偏鄉數位平權</h2>
-    <p class="sub">數位學習不能等</p>
+    </section>
 
-    <div class="block">Challenge：教育資源落差</div>
-    <div class="block">Strategy：人物 × 公益敘事</div>
-    <div class="block">Execution：整合行銷操作</div>
-    <div class="block highlight">Result：銷售 +55%｜互動 +180%</div>
-  </div>
+    <!-- 輕量網頁滾動動畫腳本（讓作品隨捲動優雅浮現） -->
+    <script>
+        const cases = document.querySelectorAll('.case');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15 // 當作品露出 15% 時觸發動畫
+        };
 
-  <div class="case">
-    <h2>天使之橋｜醫療提案</h2>
-    <p class="sub">醫療產品整合行銷</p>
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // 觸發後就不再重複計算
+                }
+            });
+        }, observerOptions);
 
-    <div class="block">Challenge：專業資訊難理解</div>
-    <div class="block">Strategy：雙層語言轉譯</div>
-    <div class="block">Execution：模組化提案系統</div>
-    <div class="block highlight">Result：決策時間 ↓35%｜效率 ↑2x</div>
-  </div>
-
-</section>
+        cases.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
 
 </body>
 </html>
