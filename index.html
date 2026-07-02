@@ -1,336 +1,182 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-
+<html lang="zh">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Freda | Brand Strategy & Integrated Marketing</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Freda Portfolio</title>
 
 <style>
-
 body{
-    max-width:1000px;
-    margin:auto;
-    padding:60px 30px;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    line-height:1.9;
-    color:#333;
-    background:#fafafa;
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f6f1e8;
+  color:#2f2a25;
+  scroll-behavior:smooth;
 }
 
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-direction:column;
+  background:linear-gradient(180deg,#f6f1e8, #efe6d8);
+  animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+.hero p{
+  opacity:0.7;
+  margin-top:10px;
+}
+
+/* SECTION */
 section{
-    margin:90px 0;
+  padding:100px 20px;
+  max-width:900px;
+  margin:auto;
 }
 
-h1{
-    font-size:60px;
-    margin-bottom:10px;
+.case{
+  margin-bottom:90px;
+  opacity:0;
+  transform:translateY(30px);
+  animation:up 1s forwards;
 }
+
+.case:nth-child(2){animation-delay:0.2s;}
+.case:nth-child(3){animation-delay:0.4s;}
+.case:nth-child(4){animation-delay:0.6s;}
 
 h2{
-    margin-top:50px;
-    font-size:34px;
+  font-size:22px;
+  margin-bottom:5px;
 }
 
-h3{
-    margin-top:35px;
+.sub{
+  color:#6b5e52;
+  margin-bottom:20px;
 }
 
-.subtitle{
-    font-size:26px;
-    color:#666;
+.block{
+  margin:18px 0;
+  line-height:1.8;
 }
 
-.quote{
-    font-size:24px;
-    margin-top:40px;
-    color:#555;
-    font-style:italic;
+.highlight{
+  border-left:3px solid #c49a6c;
+  padding-left:12px;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    margin-top:25px;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,.06);
+b{
+  font-size:15px;
 }
 
-.footer{
-    text-align:center;
-    margin-top:120px;
-    color:#777;
-    font-size:14px;
+@keyframes up{
+  to{opacity:1; transform:translateY(0);}
 }
 
-hr{
-    margin:80px 0;
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
 }
-
 </style>
-
 </head>
 
 <body>
 
+<!-- HERO -->
+<div class="hero">
+  <h1>Strategy is lived, not written.</h1>
+  <p>scroll to explore</p>
+</div>
+
+<!-- CASE 1 -->
 <section>
+  <div class="case">
+    <h2>情人衛生紙</h2>
+    <p class="sub">看見女生的勇敢力量</p>
 
-<h1>FREDA</h1>
+    <div class="block">
+      <b>Challenge</b><br>
+      突破衛生紙功能性框架，建立情感品牌。
+    </div>
 
-<div class="subtitle">
+    <div class="block">
+      <b>Strategy</b><br>
+      轉譯為「女生勇敢時刻的陪伴品牌」。
+    </div>
 
-Brand Strategy × Integrated Marketing
+    <div class="block">
+      <b>Execution</b><br>
+      網站互動 × 社群一致敘事。
+    </div>
 
-</div>
+    <div class="block highlight">
+      <b>Result</b><br>
+      搜尋排名 #1｜品牌＋公益＋故事整合曝光
+    </div>
+  </div>
 
-<div class="quote">
+  <!-- CASE 2 -->
+  <div class="case">
+    <h2>陳金鋒｜偏鄉數位平權</h2>
+    <p class="sub">數位學習不能等</p>
 
-Helping brands find the story people are willing to believe.
+    <div class="block">
+      <b>Challenge</b><br>
+      偏鄉教育資源落差大，需建立可理解公益敘事。
+    </div>
 
-</div>
+    <div class="block">
+      <b>Strategy</b><br>
+      結合人物影響力與教育議題建立共感。
+    </div>
+
+    <div class="block">
+      <b>Execution</b><br>
+      整合品牌 × 公益 × 社群內容節奏。
+    </div>
+
+    <div class="block highlight">
+      <b>Result</b><br>
+      搜尋第1｜銷售成長 +55%｜互動成長 +180%
+    </div>
+  </div>
+
+  <!-- CASE 3 -->
+  <div class="case">
+    <h2>天使之橋｜醫療產品整合行銷</h2>
+    <p class="sub">醫療溝通策略轉譯</p>
+
+    <div class="block">
+      <b>Challenge</b><br>
+      醫療資訊專業且難以被理解。
+    </div>
+
+    <div class="block">
+      <b>Strategy</b><br>
+      建立「專業語 → 市場語」雙層轉譯系統。
+    </div>
+
+    <div class="block">
+      <b>Execution</b><br>
+      模組化資訊 × 提案系統化設計。
+    </div>
+
+    <div class="block highlight">
+      <b>Result</b><br>
+      決策時間 ↓35%｜理解效率 ↑2x
+    </div>
+  </div>
 
 </section>
-
-<hr>
-
-<section>
-
-<h2>About</h2>
-
-<p>
-
-我是 Freda，一位專注於品牌策略與整合行銷的工作者。
-
-</p>
-
-<p>
-
-過去的職涯橫跨科技、酒類、生活用品、消費品牌與新品上市專案，
-從品牌定位、市場洞察、產品規劃到整合行銷，我始終相信：
-
-    
-<strong>真正的行銷，不只是曝光，而是建立值得被相信的品牌。</strong>
-
-</p>
-
-<p>
-
-我習慣從商業本質去思考銷售背後的原因，
-而不是只從廣告、媒體或單一活動開始。
-
-</p>
-
-</section>
-
-<hr>
-
-<section>
-
-<h2>Core Positioning</h2>
-
-<p>
-
-品牌策略，是我對行銷的起點；而整合行銷，是我對市場的方法。 
-
-</p>
-
-<p>
-
-我擅長整合品牌、產品、內容、社群、活動、媒體以及跨部門合作，
-讓每一次行銷，都朝著同一個品牌目標前進。
-
-</p>
-
-</section>
-
-<hr>
-
-<section>
-
-<h2>What I Solve</h2>
-
-<div class="card">
-
-<h3>Brand Strategy</h3>
-
-協助品牌建立定位與市場溝通方向。
-
-</div>
-
-<div class="card">
-
-<h3>Product Launch</h3>
-
-規劃新品上市策略與整合行銷。
-
-</div>
-
-<div class="card">
-
-<h3>Integrated Marketing</h3>
-
-整合內容、社群、媒體、網站與活動。
-
-</div>
-
-<div class="card">
-
-<h3>Cross-functional Collaboration</h3>
-
-串聯產品、設計、業務、媒體與合作夥伴。
-
-</div>
-
-</section>
-
-<hr>
-
-<section>
-
-<h2>Featured Cases</h2>
-
-<div class="card">
-
-<h3>Case 01｜Microsoft × 陳金鋒</h3>
-
-<p><strong>Challenge</strong></p>
-
-品牌如何讓科技產品與公益及教育產生連結。
-
-<p><strong>Strategy</strong></p>
-
-以故事作為品牌溝通核心，而不是產品功能。
-
-<p><strong>Execution</strong></p>
-
-影片企劃、腳本、活動、社群整合。
-
-<p><strong>Result</strong></p>
-
-成功串聯品牌、公益與人物故事。
-
-</div>
-
-<div class="card">
-
-<h3>Case 02｜情人衛生紙</h3>
-
-<p><strong>Challenge</strong></p>
-
-突破生活用品只談價格的市場印象。
-
-<p><strong>Strategy</strong></p>
-
-建立情感品牌溝通。
-
-<p><strong>Execution</strong></p>
-
-品牌企劃、網站、影片、社群。
-
-<p><strong>Result</strong></p>
-
-建立一致性的品牌形象。
-
-</div>
-
-<div class="card">
-
-<h3>Case 03｜格蘭菲迪</h3>
-
-<p><strong>Challenge</strong></p>
-
-建立品牌文化，而不是產品介紹。
-
-<p><strong>Strategy</strong></p>
-
-以收藏與品味切入品牌故事。
-
-<p><strong>Execution</strong></p>
-
-品牌活動、內容企劃、KOL合作。
-
-<p><strong>Result</strong></p>
-
-提升品牌故事性與體驗感。
-
-</div>
-
-<div class="card">
-
-<h3>Case 04｜新品上市</h3>
-
-<p>
-
-行李箱｜行動電源｜滴雞精
-
-</p>
-
-<p>
-
-重新建立市場定位與上市策略，
-整合品牌、產品與通路規劃。
-
-</p>
-
-</div>
-
-</section>
-
-<hr>
-
-<section>
-
-<h2>How I Think</h2>
-
-<ul>
-
-<li>品牌不是從 Logo 開始，而是一個消費者願意相信的理由。</li>
-
-<li>好的整合行銷，不是做曝光而已，而是讓每個接觸點說同一件事。</li>
-
-<li>每一次活動，都應該服務品牌本身，而不是只服務 KPI。</li>
-
-<li>品牌不是被廣告建立，而是被每一次體驗所累積。</li>
-
-<li>我相信，每一個產品，都值得擁有一個好的故事。</li>
-
-</ul>
-
-</section>
-
-<hr>
-
-<section>
-
-<h2>Contact</h2>
-
-<p>
-
-📧 Email：vodka206@gmail.com
-
-</p>
-
-<p>
-
-104 Resume ...
-
-</p>
-
-<p>
-
-LinkedIn  Coming Soon...
-
-</p>
-
-</section>
-
-<div class="footer">
-
-© 2026 Freda Portfolio
-
-</div>
 
 </body>
-
 </html>
